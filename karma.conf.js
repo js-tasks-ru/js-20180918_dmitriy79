@@ -15,8 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '*module/*task/*.js',
-      '*module/*task/*.css'
+      '*module/*task/*.{js,css}'
     ],
 
 
