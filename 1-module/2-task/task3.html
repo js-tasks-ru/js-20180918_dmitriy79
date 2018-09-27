@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script>
+            function getNumber(paramName) {
+                let result = NaN;
+                while(isNaN(result)) {
+                    let strResult = prompt(`Введите ${paramName}`);
+                    if (strResult === null) {
+                        return NaN;
+                    }
+                    result = Number(strResult);
+                }
+                return result;
+            }
+
+            function pow(x, n) {
+                let result = 1;
+                for (let i = 1; i <= n; i++) {
+                    result *= x;
+                }
+                return result;
+            }
+
+            let x = getNumber('x');
+            if (isNaN(x)) {
+                alert('Cancelled');
+            } else {
+                let n = Math.trunc(getNumber('n'));
+                if (isNaN(n)) {
+                    alert('Cancelled');
+                } else {
+                    alert(`${x}^${n}=${pow(x, n)}`);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

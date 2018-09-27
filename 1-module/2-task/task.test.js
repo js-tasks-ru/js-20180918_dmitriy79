@@ -14,4 +14,8 @@ describe("1-module-2-task", function() {
         expect(isValid('Ili')).toEqual(false);
     });
 
+    it("null", function() {
+        expect(isValid(null)).toEqual(false);
+        expect(isValid(undefined)).toEqual(false);
+    });
 });
